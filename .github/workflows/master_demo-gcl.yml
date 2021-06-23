@@ -19,7 +19,7 @@ jobs:
     - name: Set up Java version
       uses: actions/setup-java@v1
       with:
-        java-version: '8'
+        java-version: '11'
 
     - name: Build with Maven
       run: mvn clean install
@@ -49,5 +49,5 @@ jobs:
       with:
         app-name: 'demo-gcl'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_dfd89e6531654a4093743663d3737a8d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c99f0aa8a7714cb885e560bfefc7b8df }}
         package: '*.jar'
